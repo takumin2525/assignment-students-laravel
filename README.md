@@ -1,4 +1,3 @@
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 # Laravel 学生管理システム課題
 
 Laravelフレームワークを使用して作成した学生管理システムです。  
