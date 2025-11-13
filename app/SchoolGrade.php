@@ -26,6 +26,6 @@ class SchoolGrade extends Model
         'health_and_physical_education',
     ];
     public function student() {
-        return $this->belongsTo(Student::class);
+        return $this->belongsTo(Student::class, 'student_id');
     } 
 }

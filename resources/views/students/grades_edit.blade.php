@@ -4,7 +4,7 @@
 <div class="container">
     <h1 class="text-center mb-4">{{ $student->student_name }} さんの成績登録・編集</h1>
 
-    <form method="POST" action="{{ route('students.grades.update', $student->id) }}">
+    <form method="POST" action="{{ route('students.grade.update', $student->id) }}">
         @csrf
 
         <div class="mb-4 text-center"> 
@@ -52,7 +52,7 @@
                         <td>
                             <input type="number"
                                 name="{{ $key }}"
-                                value="{{ old($key, $grades->$key ?? '') }}"
+                                value="{{ old($key, optional($grades)->$key) }}"
                                 min="0" max="10"
                                 class="form-control text-center">
                         </td>
