@@ -48,7 +48,7 @@
 
         <div class="text-center mt-4">
             <button type="submit" class="btn btn-success">更新する</button>
-            <a href="{{ route('students.index') }}" class="btn btn-secondary">一覧に戻る</a>
+            <a href="{{ route('students.show', $student->id) }}" class="btn btn-secondary" mx-2>戻る</a>
         </div>
     </form>
 </div>

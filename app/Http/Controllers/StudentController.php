@@ -20,6 +20,11 @@ class StudentController extends Controller
     {
         [$students, $sort, $direction] = $this->buildIndexList($request);
 
+        if ($request->ajax()) 
+        {
+            return view('students._table', compact('students', 'sort', 'direction'));
+        }
+
         return view('students.index', compact('students', 'sort', 'direction'));
     }
 
@@ -163,6 +168,11 @@ class StudentController extends Controller
             ->orderBy('term')
             ->get()
             ->keyBy('term');
+
+        if ($request->ajax()) 
+        {
+        return view('students._grades_table', compact('grades'));
+        }
 
         return view('students.show', compact('student', 'grades', 'selectedGrade'));
     }
